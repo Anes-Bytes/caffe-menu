@@ -1,0 +1,63 @@
+{% load i18n %}
+<footer class="site-footer" id="contact">
+    <div class="container footer-layout">
+        <section>
+            <h3>{{ site_settings.site_name }}</h3>
+            <p>{{ site_settings.footer_text|default:_("Serving quality coffee and treats.") }}</p>
+            {% if site_settings.address %}
+                <p class="footer-meta">
+                    {{ site_settings.address }}
+                </p>
+            {% endif %}
+            {% if site_settings.opening_hours %}
+                <p class="footer-meta">{% trans "Open" %}: {{ site_settings.opening_hours }}</p>
+            {% endif %}
+        </section>
+        <section>
+            <h4>{% trans "Quick links" %}</h4>
+            <div class="footer-links">
+                <a href="#hero">{% trans "Hero" %}</a>
+                <a href="#signature">{% trans "Signature" %}</a>
+                <a href="#menu">{% trans "Menu" %}</a>
+                <a href="#contact">{% trans "Contact" %}</a>
+                {% for link in site_settings.footer_links %}
+                    {% if link.url and link.label %}
+                        <a href="{{ link.url }}" rel="noreferrer noopener">{{ link.label }}</a>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </section>
+        <section>
+            <h4>{% trans "Stay in touch" %}</h4>
+            <ul class="footer-contact">
+                {% if site_settings.contact_email %}
+                    <li><a href="mailto:{{ site_settings.contact_email }}">{{ site_settings.contact_email }}</a></li>
+                {% endif %}
+                {% if site_settings.contact_phone %}
+                    <li><a href="tel:{{ site_settings.contact_phone }}">{{ site_settings.contact_phone }}</a></li>
+                {% endif %}
+                {% if site_settings.contact_whatsapp %}
+                    <li><a href="https://wa.me/{{ site_settings.contact_whatsapp }}" target="_blank" rel="noreferrer noopener">{% trans "WhatsApp" %}</a></li>
+                {% endif %}
+            </ul>
+            {% if site_settings.social_links %}
+                <div class="footer-social">
+                    {% for label, url in site_settings.social_links.items %}
+                        {% if url %}
+                            <a href="{{ url }}" target="_blank" rel="noreferrer noopener">{{ label|title }}</a>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            {% endif %}
+        </section>
+    </div>
+    <div class="footer-bottom">
+        <p class="footer-love">
+            {% blocktrans trimmed %}Made with ❤️ and lots of ☕ by{% endblocktrans %}
+            <a class="footer-credit" href="https://t.me/Anes_py" target="_blank" rel="noreferrer noopener">@Anes</a>
+            &
+            <a class="footer-credit" href="https://t.me/H0lwin_p" target="_blank" rel="noreferrer noopener">@H0lwin</a>
+        </p>
+    </div>
+</footer>
+

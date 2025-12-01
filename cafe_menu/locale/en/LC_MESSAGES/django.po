@@ -1,0 +1,436 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Cafe Menu 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-01 15:10+0330\n"
+"PO-Revision-Date: 2025-12-01 15:15+0330\n"
+"Last-Translator: Cafe Menu Bot <support@example.com>\n"
+"Language-Team: English\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\menu\admin.py:54
+msgid "Basics"
+msgstr "Basics"
+
+#: .\menu\admin.py:67
+msgid "Pricing & Availability"
+msgstr "Pricing & Availability"
+
+#: .\menu\admin.py:79
+msgid "Metadata"
+msgstr "Metadata"
+
+#: .\menu\admin.py:92
+msgid "Timestamps"
+msgstr "Timestamps"
+
+#: .\menu\admin.py:102
+msgid "Identity"
+msgstr "Identity"
+
+#: .\menu\admin.py:106
+msgid "Hero Section"
+msgstr "Hero Section"
+
+#: .\menu\admin.py:110 .\templates\partials\footer.html:32
+#: .\templates\partials\header.html:16
+msgid "Contact"
+msgstr "Contact"
+
+#: .\menu\admin.py:114
+msgid "Footer"
+msgstr "Footer"
+
+#: .\menu\admin.py:118
+msgid "SEO"
+msgstr "SEO"
+
+#: .\menu\models.py:16
+msgid "created at"
+msgstr "created at"
+
+#: .\menu\models.py:17
+msgid "updated at"
+msgstr "updated at"
+
+#: .\menu\models.py:40
+msgid "site name"
+msgstr "site name"
+
+#: .\menu\models.py:41
+msgid "logo"
+msgstr "logo"
+
+#: .\menu\models.py:42
+msgid "favicon"
+msgstr "favicon"
+
+#: .\menu\models.py:43
+msgid "hero headline (EN)"
+msgstr "hero headline (EN)"
+
+#: .\menu\models.py:44
+msgid "hero headline (FA)"
+msgstr "hero headline (FA)"
+
+#: .\menu\models.py:45
+msgid "hero subtitle (EN)"
+msgstr "hero subtitle (EN)"
+
+#: .\menu\models.py:46
+msgid "hero subtitle (FA)"
+msgstr "hero subtitle (FA)"
+
+#: .\menu\models.py:47
+msgid "contact email"
+msgstr "contact email"
+
+#: .\menu\models.py:48
+msgid "contact phone"
+msgstr "contact phone"
+
+#: .\menu\models.py:49
+msgid "whatsapp"
+msgstr "whatsapp"
+
+#: .\menu\models.py:50
+msgid "address (EN)"
+msgstr "address (EN)"
+
+#: .\menu\models.py:51
+msgid "address (FA)"
+msgstr "address (FA)"
+
+#: .\menu\models.py:52
+msgid "opening hours"
+msgstr "opening hours"
+
+#: .\menu\models.py:53
+msgid "footer text (EN)"
+msgstr "footer text (EN)"
+
+#: .\menu\models.py:54
+msgid "footer text (FA)"
+msgstr "footer text (FA)"
+
+#: .\menu\models.py:55
+msgid "footer links"
+msgstr "footer links"
+
+#: .\menu\models.py:56
+msgid "social links"
+msgstr "social links"
+
+#: .\menu\models.py:57
+msgid "SEO description (EN)"
+msgstr "SEO description (EN)"
+
+#: .\menu\models.py:58
+msgid "SEO description (FA)"
+msgstr "SEO description (FA)"
+
+#: .\menu\models.py:61 .\menu\models.py:62
+msgid "site settings"
+msgstr "site settings"
+
+#: .\menu\models.py:80
+msgid "title (EN)"
+msgstr "title (EN)"
+
+#: .\menu\models.py:81
+msgid "title (FA)"
+msgstr "title (FA)"
+
+#: .\menu\models.py:82 .\menu\models.py:116
+msgid "description (EN)"
+msgstr "description (EN)"
+
+#: .\menu\models.py:83 .\menu\models.py:117
+msgid "description (FA)"
+msgstr "description (FA)"
+
+#: .\menu\models.py:84
+msgid "display order"
+msgstr "display order"
+
+#: .\menu\models.py:85
+msgid "active"
+msgstr "active"
+
+#: .\menu\models.py:89
+msgid "category"
+msgstr "category"
+
+#: .\menu\models.py:90
+msgid "categories"
+msgstr "categories"
+
+#: .\menu\models.py:108
+msgid "Iranian Rial"
+msgstr "Iranian Rial"
+
+#: .\menu\models.py:109
+msgid "US Dollar"
+msgstr "US Dollar"
+
+#: .\menu\models.py:113
+msgid "name (EN)"
+msgstr "name (EN)"
+
+#: .\menu\models.py:114
+msgid "name (FA)"
+msgstr "name (FA)"
+
+#: .\menu\models.py:115
+msgid "slug"
+msgstr "slug"
+
+#: .\menu\models.py:119
+msgid "price"
+msgstr "price"
+
+#: .\menu\models.py:124
+msgid "currency"
+msgstr "currency"
+
+#: .\menu\models.py:125
+msgid "image"
+msgstr "image"
+
+#: .\menu\models.py:126
+msgid "signature item"
+msgstr "signature item"
+
+#: .\menu\models.py:127
+msgid "available"
+msgstr "available"
+
+#: .\menu\models.py:128
+msgid "calories"
+msgstr "calories"
+
+#: .\menu\models.py:129
+msgid "prep time"
+msgstr "prep time"
+
+#: .\menu\models.py:130
+msgid "badge (EN)"
+msgstr "badge (EN)"
+
+#: .\menu\models.py:131
+msgid "badge (FA)"
+msgstr "badge (FA)"
+
+#: .\menu\models.py:133
+msgid "rating"
+msgstr "rating"
+
+#: .\menu\models.py:142
+msgid "Optional public rating displayed on the card"
+msgstr "Optional public rating displayed on the card"
+
+#: .\menu\models.py:147
+msgid "menu item"
+msgstr "menu item"
+
+#: .\menu\models.py:148
+msgid "menu items"
+msgstr "menu items"
+
+#: .\templates\base.html:24
+msgid "Skip to content"
+msgstr "Skip to content"
+
+#: .\templates\base.html:29
+msgid "Brewing your experience..."
+msgstr "Brewing your experience..."
+
+#: .\templates\base.html:44
+msgid "Switch language"
+msgstr "Switch language"
+
+#: .\templates\menu\home.html:4
+msgid "Artisan cafe menu"
+msgstr "Artisan cafe menu"
+
+#: .\templates\menu\home.html:13
+msgid "Choose your language"
+msgstr "Choose your language"
+
+#: .\templates\menu\home.html:14
+msgid "Experience the cafe in your language"
+msgstr "Experience the cafe in your language"
+
+#: .\templates\menu\home.html:20
+msgid "Persian"
+msgstr "Persian"
+
+#: .\templates\menu\home.html:26
+msgid "English"
+msgstr "English"
+
+#: .\templates\menu\home.html:35
+msgid "Boutique Cafe"
+msgstr "Boutique Cafe"
+
+#: .\templates\menu\home.html:38 .\templates\menu\home.html:40
+msgid "Welcome to our cafe"
+msgstr "Welcome to our cafe"
+
+#: .\templates\menu\home.html:45 .\templates\menu\home.html:47
+msgid "Handcrafted beverages, soulful pastries, and immersive aromas."
+msgstr "Handcrafted beverages, soulful pastries, and immersive aromas."
+
+#: .\templates\menu\home.html:51
+msgid "Browse menu"
+msgstr "Browse menu"
+
+#: .\templates\menu\home.html:52 .\templates\menu\home.html:103
+msgid "Signature picks"
+msgstr "Signature picks"
+
+#: .\templates\menu\home.html:57
+msgid "Phone"
+msgstr "Phone"
+
+#: .\templates\menu\home.html:63
+msgid "Hours"
+msgstr "Hours"
+
+#: .\templates\menu\home.html:69
+msgid "Address"
+msgstr "Address"
+
+#: .\templates\menu\home.html:84
+msgid "Freshly roasted beans"
+msgstr "Freshly roasted beans"
+
+#: .\templates\menu\home.html:85
+msgid "Since 2020"
+msgstr "Since 2020"
+
+#: .\templates\menu\home.html:89
+msgid "Signature items"
+msgstr "Signature items"
+
+#: .\templates\menu\home.html:90
+msgid "featured"
+msgstr "featured"
+
+#: .\templates\menu\home.html:102
+msgid "House favorites"
+msgstr "House favorites"
+
+#: .\templates\menu\home.html:105
+msgid "Curated by our head barista and pastry chef."
+msgstr "Curated by our head barista and pastry chef."
+
+#: .\templates\menu\home.html:118 .\templates\menu\home.html:177
+#: .\templates\partials\footer.html:30 .\templates\partials\header.html:14
+msgid "Signature"
+msgstr "Signature"
+
+#: .\templates\menu\home.html:124 .\templates\menu\home.html:188
+msgid "Prep"
+msgstr "Prep"
+
+#: .\templates\menu\home.html:139 .\templates\partials\footer.html:31
+#: .\templates\partials\header.html:15
+msgid "Menu"
+msgstr "Menu"
+
+#: .\templates\menu\home.html:140
+msgid "Explore the flavors"
+msgstr "Explore the flavors"
+
+#: .\templates\menu\home.html:142
+msgid "Filter by category to discover your next favorite."
+msgstr "Filter by category to discover your next favorite."
+
+#: .\templates\menu\home.html:145
+msgid "All"
+msgstr "All"
+
+#: .\templates\menu\home.html:191 .\templates\menu\home.html:258
+msgid "Calories"
+msgstr "Calories"
+
+#: .\templates\menu\home.html:199
+msgid "View details"
+msgstr "View details"
+
+#: .\templates\menu\home.html:208
+msgid "No menu items are available yet. Check back soon!"
+msgstr "No menu items are available yet. Check back soon!"
+
+#: .\templates\menu\home.html:216
+msgid "Visit us"
+msgstr "Visit us"
+
+#: .\templates\menu\home.html:217
+msgid "Ready for your next coffee break?"
+msgstr "Ready for your next coffee break?"
+
+#: .\templates\menu\home.html:230
+msgid "Call to reserve"
+msgstr "Call to reserve"
+
+#: .\templates\menu\home.html:233
+msgid "Email us"
+msgstr "Email us"
+
+#: .\templates\menu\home.html:240
+msgid "Close details"
+msgstr "Close details"
+
+#: .\templates\menu\home.html:250
+msgid "Price"
+msgstr "Price"
+
+#: .\templates\menu\home.html:254
+msgid "Prep time"
+msgstr "Prep time"
+
+#: .\templates\menu\home.html:262
+msgid "Rating"
+msgstr "Rating"
+
+#: .\templates\partials\footer.html:23
+msgid "Open"
+msgstr "Open"
+
+#: .\templates\partials\footer.html:27
+msgid "Quick links"
+msgstr "Quick links"
+
+#: .\templates\partials\footer.html:29
+msgid "Hero"
+msgstr "Hero"
+
+#: .\templates\partials\footer.html:41
+msgid "Stay in touch"
+msgstr "Stay in touch"
+
+#: .\templates\partials\footer.html:50
+msgid "WhatsApp"
+msgstr "WhatsApp"
+
+#: .\templates\partials\footer.html:66
+msgid "Made with ❤️ and lots of ☕ by"
+msgstr "Made with ❤️ and lots of ☕ by"
+
+#: .\templates\partials\header.html:13
+msgid "Home"
+msgstr "Home"
+
+#: .\templates\partials\header.html:21
+msgid "Call us"
+msgstr "Call us"
+
+#: .\templates\partials\header.html:26
+msgid "Email"
+msgstr "Email"

@@ -1,0 +1,436 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Cafe Menu 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-01 15:10+0330\n"
+"PO-Revision-Date: 2025-12-01 15:15+0330\n"
+"Last-Translator: Cafe Menu Bot <support@example.com>\n"
+"Language-Team: Persian\n"
+"Language: fa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: .\menu\admin.py:54
+msgid "Basics"
+msgstr "اطلاعات پایه"
+
+#: .\menu\admin.py:67
+msgid "Pricing & Availability"
+msgstr "قیمت‌گذاری و موجودی"
+
+#: .\menu\admin.py:79
+msgid "Metadata"
+msgstr "اطلاعات تکمیلی"
+
+#: .\menu\admin.py:92
+msgid "Timestamps"
+msgstr "ثبت زمان‌ها"
+
+#: .\menu\admin.py:102
+msgid "Identity"
+msgstr "هویت برند"
+
+#: .\menu\admin.py:106
+msgid "Hero Section"
+msgstr "بخش هرو"
+
+#: .\menu\admin.py:110 .\templates\partials\footer.html:32
+#: .\templates\partials\header.html:16
+msgid "Contact"
+msgstr "تماس"
+
+#: .\menu\admin.py:114
+msgid "Footer"
+msgstr "پاورقی"
+
+#: .\menu\admin.py:118
+msgid "SEO"
+msgstr "سئو"
+
+#: .\menu\models.py:16
+msgid "created at"
+msgstr "تاریخ ایجاد"
+
+#: .\menu\models.py:17
+msgid "updated at"
+msgstr "آخرین به‌روزرسانی"
+
+#: .\menu\models.py:40
+msgid "site name"
+msgstr "نام سایت"
+
+#: .\menu\models.py:41
+msgid "logo"
+msgstr "لوگو"
+
+#: .\menu\models.py:42
+msgid "favicon"
+msgstr "آیکن سایت"
+
+#: .\menu\models.py:43
+msgid "hero headline (EN)"
+msgstr "تیتر هرو (انگلیسی)"
+
+#: .\menu\models.py:44
+msgid "hero headline (FA)"
+msgstr "تیتر هرو (فارسی)"
+
+#: .\menu\models.py:45
+msgid "hero subtitle (EN)"
+msgstr "زیرتیتر هرو (انگلیسی)"
+
+#: .\menu\models.py:46
+msgid "hero subtitle (FA)"
+msgstr "زیرتیتر هرو (فارسی)"
+
+#: .\menu\models.py:47
+msgid "contact email"
+msgstr "ایمیل تماس"
+
+#: .\menu\models.py:48
+msgid "contact phone"
+msgstr "تلفن تماس"
+
+#: .\menu\models.py:49
+msgid "whatsapp"
+msgstr "واتساپ"
+
+#: .\menu\models.py:50
+msgid "address (EN)"
+msgstr "آدرس (انگلیسی)"
+
+#: .\menu\models.py:51
+msgid "address (FA)"
+msgstr "آدرس (فارسی)"
+
+#: .\menu\models.py:52
+msgid "opening hours"
+msgstr "ساعات کاری"
+
+#: .\menu\models.py:53
+msgid "footer text (EN)"
+msgstr "متن پاورقی (انگلیسی)"
+
+#: .\menu\models.py:54
+msgid "footer text (FA)"
+msgstr "متن پاورقی (فارسی)"
+
+#: .\menu\models.py:55
+msgid "footer links"
+msgstr "لینک‌های پاورقی"
+
+#: .\menu\models.py:56
+msgid "social links"
+msgstr "لینک‌های شبکه اجتماعی"
+
+#: .\menu\models.py:57
+msgid "SEO description (EN)"
+msgstr "توضیح سئو (انگلیسی)"
+
+#: .\menu\models.py:58
+msgid "SEO description (FA)"
+msgstr "توضیح سئو (فارسی)"
+
+#: .\menu\models.py:61 .\menu\models.py:62
+msgid "site settings"
+msgstr "تنظیمات سایت"
+
+#: .\menu\models.py:80
+msgid "title (EN)"
+msgstr "عنوان (انگلیسی)"
+
+#: .\menu\models.py:81
+msgid "title (FA)"
+msgstr "عنوان (فارسی)"
+
+#: .\menu\models.py:82 .\menu\models.py:116
+msgid "description (EN)"
+msgstr "توضیح (انگلیسی)"
+
+#: .\menu\models.py:83 .\menu\models.py:117
+msgid "description (FA)"
+msgstr "توضیح (فارسی)"
+
+#: .\menu\models.py:84
+msgid "display order"
+msgstr "ترتیب نمایش"
+
+#: .\menu\models.py:85
+msgid "active"
+msgstr "فعال"
+
+#: .\menu\models.py:89
+msgid "category"
+msgstr "دسته‌بندی"
+
+#: .\menu\models.py:90
+msgid "categories"
+msgstr "دسته‌بندی‌ها"
+
+#: .\menu\models.py:108
+msgid "Iranian Rial"
+msgstr "ریال ایران"
+
+#: .\menu\models.py:109
+msgid "US Dollar"
+msgstr "دلار آمریکا"
+
+#: .\menu\models.py:113
+msgid "name (EN)"
+msgstr "نام (انگلیسی)"
+
+#: .\menu\models.py:114
+msgid "name (FA)"
+msgstr "نام (فارسی)"
+
+#: .\menu\models.py:115
+msgid "slug"
+msgstr "نامک"
+
+#: .\menu\models.py:119
+msgid "price"
+msgstr "قیمت"
+
+#: .\menu\models.py:124
+msgid "currency"
+msgstr "ارز"
+
+#: .\menu\models.py:125
+msgid "image"
+msgstr "تصویر"
+
+#: .\menu\models.py:126
+msgid "signature item"
+msgstr "آیتم ویژه"
+
+#: .\menu\models.py:127
+msgid "available"
+msgstr "موجود"
+
+#: .\menu\models.py:128
+msgid "calories"
+msgstr "کالری"
+
+#: .\menu\models.py:129
+msgid "prep time"
+msgstr "زمان آماده‌سازی"
+
+#: .\menu\models.py:130
+msgid "badge (EN)"
+msgstr "نشان (انگلیسی)"
+
+#: .\menu\models.py:131
+msgid "badge (FA)"
+msgstr "نشان (فارسی)"
+
+#: .\menu\models.py:133
+msgid "rating"
+msgstr "امتیاز"
+
+#: .\menu\models.py:142
+msgid "Optional public rating displayed on the card"
+msgstr "امتیاز اختیاری برای نمایش روی کارت"
+
+#: .\menu\models.py:147
+msgid "menu item"
+msgstr "آیتم منو"
+
+#: .\menu\models.py:148
+msgid "menu items"
+msgstr "آیتم‌های منو"
+
+#: .\templates\base.html:24
+msgid "Skip to content"
+msgstr "پرش به محتوا"
+
+#: .\templates\base.html:29
+msgid "Brewing your experience..."
+msgstr "در حال دم کردن تجربه شما..."
+
+#: .\templates\base.html:44
+msgid "Switch language"
+msgstr "تغییر زبان"
+
+#: .\templates\menu\home.html:4
+msgid "Artisan cafe menu"
+msgstr "منوی کافه دست‌ساز"
+
+#: .\templates\menu\home.html:13
+msgid "Choose your language"
+msgstr "زبان خود را انتخاب کنید"
+
+#: .\templates\menu\home.html:14
+msgid "Experience the cafe in your language"
+msgstr "کافه را با زبان دلخواهتان تجربه کنید"
+
+#: .\templates\menu\home.html:20
+msgid "Persian"
+msgstr "فارسی"
+
+#: .\templates\menu\home.html:26
+msgid "English"
+msgstr "انگلیسی"
+
+#: .\templates\menu\home.html:35
+msgid "Boutique Cafe"
+msgstr "کافه بوتیک"
+
+#: .\templates\menu\home.html:38 .\templates\menu\home.html:40
+msgid "Welcome to our cafe"
+msgstr "به کافه ما خوش آمدید"
+
+#: .\templates\menu\home.html:45 .\templates\menu\home.html:47
+msgid "Handcrafted beverages, soulful pastries, and immersive aromas."
+msgstr "نوشیدنی‌های دست‌ساز، شیرینی‌های روح‌نواز و عطرهای ماندگار."
+
+#: .\templates\menu\home.html:51
+msgid "Browse menu"
+msgstr "مشاهده منو"
+
+#: .\templates\menu\home.html:52 .\templates\menu\home.html:103
+msgid "Signature picks"
+msgstr "انتخاب‌های ویژه"
+
+#: .\templates\menu\home.html:57
+msgid "Phone"
+msgstr "تلفن"
+
+#: .\templates\menu\home.html:63
+msgid "Hours"
+msgstr "ساعات"
+
+#: .\templates\menu\home.html:69
+msgid "Address"
+msgstr "نشانی"
+
+#: .\templates\menu\home.html:84
+msgid "Freshly roasted beans"
+msgstr "دانه‌های تازه برشته"
+
+#: .\templates\menu\home.html:85
+msgid "Since 2020"
+msgstr "از ۲۰۲۰"
+
+#: .\templates\menu\home.html:89
+msgid "Signature items"
+msgstr "آیتم‌های ویژه"
+
+#: .\templates\menu\home.html:90
+msgid "featured"
+msgstr "برگزیده"
+
+#: .\templates\menu\home.html:102
+msgid "House favorites"
+msgstr "منتخب‌های کافه"
+
+#: .\templates\menu\home.html:105
+msgid "Curated by our head barista and pastry chef."
+msgstr "انتخاب شده توسط باریستا و سرآشپز شیرینی ما."
+
+#: .\templates\menu\home.html:118 .\templates\menu\home.html:177
+#: .\templates\partials\footer.html:30 .\templates\partials\header.html:14
+msgid "Signature"
+msgstr "ویژه"
+
+#: .\templates\menu\home.html:124 .\templates\menu\home.html:188
+msgid "Prep"
+msgstr "آماده‌سازی"
+
+#: .\templates\menu\home.html:139 .\templates\partials\footer.html:31
+#: .\templates\partials\header.html:15
+msgid "Menu"
+msgstr "منو"
+
+#: .\templates\menu\home.html:140
+msgid "Explore the flavors"
+msgstr "طعم‌ها را کشف کنید"
+
+#: .\templates\menu\home.html:142
+msgid "Filter by category to discover your next favorite."
+msgstr "برای پیدا کردن طعم محبوب بعدی، بر اساس دسته فیلتر کنید."
+
+#: .\templates\menu\home.html:145
+msgid "All"
+msgstr "همه"
+
+#: .\templates\menu\home.html:191 .\templates\menu\home.html:258
+msgid "Calories"
+msgstr "کالری"
+
+#: .\templates\menu\home.html:199
+msgid "View details"
+msgstr "جزئیات بیشتر"
+
+#: .\templates\menu\home.html:208
+msgid "No menu items are available yet. Check back soon!"
+msgstr "هنوز آیتمی ثبت نشده است. به زودی سر بزنید!"
+
+#: .\templates\menu\home.html:216
+msgid "Visit us"
+msgstr "به ما سر بزنید"
+
+#: .\templates\menu\home.html:217
+msgid "Ready for your next coffee break?"
+msgstr "برای استراحت بعدی با قهوه آماده‌اید؟"
+
+#: .\templates\menu\home.html:230
+msgid "Call to reserve"
+msgstr "برای رزرو تماس بگیرید"
+
+#: .\templates\menu\home.html:233
+msgid "Email us"
+msgstr "برای ما ایمیل بفرستید"
+
+#: .\templates\menu\home.html:240
+msgid "Close details"
+msgstr "بستن جزئیات"
+
+#: .\templates\menu\home.html:250
+msgid "Price"
+msgstr "قیمت"
+
+#: .\templates\menu\home.html:254
+msgid "Prep time"
+msgstr "زمان آماده‌سازی"
+
+#: .\templates\menu\home.html:262
+msgid "Rating"
+msgstr "امتیاز"
+
+#: .\templates\partials\footer.html:23
+msgid "Open"
+msgstr "ساعات کار"
+
+#: .\templates\partials\footer.html:27
+msgid "Quick links"
+msgstr "میانبرها"
+
+#: .\templates\partials\footer.html:29
+msgid "Hero"
+msgstr "هرو"
+
+#: .\templates\partials\footer.html:41
+msgid "Stay in touch"
+msgstr "در ارتباط بمانید"
+
+#: .\templates\partials\footer.html:50
+msgid "WhatsApp"
+msgstr "واتساپ"
+
+#: .\templates\partials\footer.html:66
+msgid "Made with ❤️ and lots of ☕ by"
+msgstr "Made with ❤️ and lots of ☕ by"
+
+#: .\templates\partials\header.html:13
+msgid "Home"
+msgstr "خانه"
+
+#: .\templates\partials\header.html:21
+msgid "Call us"
+msgstr "با ما تماس بگیرید"
+
+#: .\templates\partials\header.html:26
+msgid "Email"
+msgstr "ایمیل"

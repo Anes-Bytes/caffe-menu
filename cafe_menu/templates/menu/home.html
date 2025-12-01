@@ -1,0 +1,259 @@
+{% extends "base.html" %}
+{% load static i18n %}
+
+{% block title %}{{ site_settings.site_name }} · {% trans "Artisan cafe menu" %}{% endblock %}
+{% block body_class %}site-body home-page{% endblock %}
+
+{% block content %}
+<section id="language-gate"
+         class="language-gate"
+         data-language-selected="{% if language_selected %}true{% else %}false{% endif %}">
+    <div class="language-gate__blur"></div>
+    <div class="language-gate__inner">
+        <p class="overline">{% trans "Choose your language" %}</p>
+        <h2>{% trans "Experience the cafe in your language" %}</h2>
+        <div class="language-gate__actions">
+            <form method="post" action="{% url 'set_language' %}">
+                {% csrf_token %}
+                <input type="hidden" name="language" value="fa">
+                <input type="hidden" name="next" value="{{ language_urls.fa }}">
+                <button type="submit" class="language-chip">{% trans "Persian" %}</button>
+            </form>
+            <form method="post" action="{% url 'set_language' %}">
+                {% csrf_token %}
+                <input type="hidden" name="language" value="en">
+                <input type="hidden" name="next" value="{{ language_urls.en }}">
+                <button type="submit" class="language-chip">{% trans "English" %}</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<section id="hero" class="hero" data-animate>
+    <div class="container hero-layout">
+        <div class="hero-copy">
+            <p class="overline">{% trans "Boutique Cafe" %}</p>
+            <h1>{{ site_settings.hero_headline|default:_("Welcome to our cafe") }}</h1>
+            <p>{{ site_settings.hero_subtitle|default:_("Handcrafted beverages, soulful pastries, and immersive aromas.") }}</p>
+            <div class="hero-actions">
+                <a class="btn primary" href="#menu">{% trans "Browse menu" %}</a>
+                <a class="btn ghost" href="#signature">{% trans "Signature picks" %}</a>
+            </div>
+            <dl class="hero-meta">
+                {% if site_settings.contact_phone %}
+                    <div>
+                        <dt>{% trans "Phone" %}</dt>
+                        <dd>{{ site_settings.contact_phone }}</dd>
+                    </div>
+                {% endif %}
+                {% if site_settings.opening_hours %}
+                    <div>
+                        <dt>{% trans "Hours" %}</dt>
+                        <dd>{{ site_settings.opening_hours }}</dd>
+                    </div>
+                {% endif %}
+                {% if site_settings.address %}
+                    <div>
+                        <dt>{% trans "Address" %}</dt>
+                        <dd>{{ site_settings.address }}</dd>
+                    </div>
+                {% endif %}
+            </dl>
+        </div>
+        <div class="hero-visual">
+            <div class="hero-card">
+                <span class="hero-icon">☕</span>
+                <p class="hero-card__label">{% trans "Freshly roasted beans" %}</p>
+                <p class="hero-card__value">{% trans "Since 2020" %}</p>
+            </div>
+            {% if signature_items %}
+                <div class="hero-card secondary">
+                    <p class="hero-card__label">{% trans "Signature items" %}</p>
+                    <p class="hero-card__value">{{ signature_items|length }} {% trans "featured" %}</p>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</section>
+
+{% if signature_items %}
+<section id="signature" class="signature-section" data-animate>
+    <div class="container">
+        <div class="section-heading">
+            <div>
+                <p class="overline">{% trans "House favorites" %}</p>
+                <h2>{% trans "Signature picks" %}</h2>
+            </div>
+            <p class="section-subtitle">{% trans "Curated by our head barista and pastry chef." %}</p>
+        </div>
+        <div class="signature-slider">
+            {% for item in signature_items %}
+                <article class="signature-card">
+                    <div class="signature-media">
+                        {% if item.image %}
+                            <img src="{{ item.image.url }}" alt="{{ item.name }}">
+                        {% else %}
+                            <div class="placeholder"></div>
+                        {% endif %}
+                    </div>
+                    <div class="signature-content">
+                        <span class="badge">{% trans "Signature" %}</span>
+                        <h3>{{ item.name }}</h3>
+                        <p>{{ item.description|truncatechars:140 }}</p>
+                        <div class="signature-meta">
+                            <span>{{ item.formatted_price }}</span>
+                            {% if item.preparation_time %}
+                                <span>{% trans "Prep" %}: {{ item.preparation_time }}</span>
+                            {% endif %}
+                        </div>
+                    </div>
+                </article>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endif %}
+
+<section id="menu" class="menu-section" data-animate>
+    <div class="container">
+        <div class="section-heading">
+            <div>
+                <p class="overline">{% trans "Menu" %}</p>
+                <h2>{% trans "Explore the flavors" %}</h2>
+            </div>
+            <p class="section-subtitle">{% trans "Filter by category to discover your next favorite." %}</p>
+        </div>
+        <div class="category-chips" role="tablist">
+            <button class="category-chip is-active" data-category="all" role="tab">{% trans "All" %}</button>
+            {% for category in categories %}
+                <button class="category-chip"
+                        data-category="category-{{ category.pk }}"
+                        role="tab">
+                    {{ category.title }}
+                </button>
+            {% endfor %}
+        </div>
+        {% if categories %}
+            <div class="menu-grid" id="menuGrid">
+                {% for category in categories %}
+                    {% if category.cover_image %}
+                        <article class="menu-card menu-card--category" data-category="category-{{ category.pk }}">
+                            <div class="menu-card__media">
+                                <img src="{{ category.cover_image.url }}" alt="{{ category.title }}">
+                            </div>
+                            <div class="menu-card__body">
+                                <div class="menu-card__top">
+                                    <h3>{{ category.title }}</h3>
+                                    <span class="menu-price">{% trans "Curated selection" %}</span>
+                                </div>
+                                <p>{{ category.description|default:_("Discover the highlights of this category.") }}</p>
+                            </div>
+                        </article>
+                    {% endif %}
+                    {% for item in category.items.all %}
+                        <article class="menu-card"
+                                 data-category="category-{{ category.pk }}"
+                                 data-name="{{ item.name }}"
+                                 data-description="{{ item.description|default:'' }}"
+                                 data-price="{{ item.formatted_price }}"
+                                 data-prep="{{ item.preparation_time|default:'' }}"
+                                 data-calories="{{ item.calories|default:'' }}"
+                                 data-rating="{{ item.rating|default:'0' }}"
+                                 data-badge="{{ item.highlight_badge }}"
+                                 data-image="{% if item.image %}{{ item.image.url }}{% endif %}">
+                            <div class="menu-card__media">
+                                {% if item.image %}
+                                    <img src="{{ item.image.url }}" alt="{{ item.name }}">
+                                {% else %}
+                                    <div class="placeholder"></div>
+                                {% endif %}
+                                {% if item.highlight_badge %}
+                                    <span class="menu-badge">{{ item.highlight_badge }}</span>
+                                {% elif item.is_signature %}
+                                    <span class="menu-badge">{% trans "Signature" %}</span>
+                                {% endif %}
+                            </div>
+                            <div class="menu-card__body">
+                                <div class="menu-card__top">
+                                    <h3>{{ item.name }}</h3>
+                                    <span class="menu-price">{{ item.formatted_price }}</span>
+                                </div>
+                                <p>{{ item.description|truncatechars:120 }}</p>
+                                <div class="menu-card__meta">
+                                    {% if item.preparation_time %}
+                                        <span>{% trans "Prep" %}: {{ item.preparation_time }}</span>
+                                    {% endif %}
+                                    {% if item.calories %}
+                                        <span>{% trans "Calories" %}: {{ item.calories }}</span>
+                                    {% endif %}
+                                </div>
+                                <div class="menu-card__actions">
+                                    {% if item.rating %}
+                                        <span class="rating-pill">★ {{ item.rating }}</span>
+                                    {% endif %}
+                                    <button class="ghost-link" type="button" data-open-drawer>
+                                        {% trans "View details" %}
+                                    </button>
+                                </div>
+                            </div>
+                        </article>
+                    {% endfor %}
+                {% endfor %}
+            </div>
+        {% else %}
+            <p class="empty-state">{% trans "No menu items are available yet. Check back soon!" %}</p>
+        {% endif %}
+    </div>
+</section>
+
+<section class="contact-cta" data-animate>
+    <div class="container contact-cta__layout">
+        <div>
+            <p class="overline">{% trans "Visit us" %}</p>
+            <h2>{% trans "Ready for your next coffee break?" %}</h2>
+            {% if site_settings.address %}
+                <p>{{ site_settings.address }}</p>
+            {% endif %}
+        </div>
+        <div class="contact-cta__actions">
+            {% if site_settings.contact_phone %}
+                <a class="btn primary" href="tel:{{ site_settings.contact_phone }}">{% trans "Call to reserve" %}</a>
+            {% endif %}
+            {% if site_settings.contact_email %}
+                <a class="btn ghost" href="mailto:{{ site_settings.contact_email }}">{% trans "Email us" %}</a>
+            {% endif %}
+        </div>
+    </div>
+</section>
+
+<section id="productDrawer" class="product-drawer" aria-hidden="true">
+    <button class="drawer-close" type="button" aria-label="{% trans 'Close details' %}" data-close-drawer>×</button>
+    <div class="product-drawer__media">
+        <img src="" alt="" data-drawer-image>
+        <span class="menu-badge" data-drawer-badge></span>
+    </div>
+    <div class="product-drawer__body">
+        <h3 data-drawer-title></h3>
+        <p data-drawer-description></p>
+        <dl class="drawer-meta">
+            <div>
+                <dt>{% trans "Price" %}</dt>
+                <dd data-drawer-price></dd>
+            </div>
+            <div>
+                <dt>{% trans "Prep time" %}</dt>
+                <dd data-drawer-prep></dd>
+            </div>
+            <div>
+                <dt>{% trans "Calories" %}</dt>
+                <dd data-drawer-calories></dd>
+            </div>
+            <div>
+                <dt>{% trans "Rating" %}</dt>
+                <dd data-drawer-rating></dd>
+            </div>
+        </dl>
+    </div>
+</section>
+{% endblock %}
+
